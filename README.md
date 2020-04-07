@@ -1,5 +1,5 @@
 # UE4ModuleCreationReference
-A small repo demonstrating the creation of a Editor module with a factor class for UE4. Factory classes are not included
+A small repo demonstrating the creation of a Editor module with a factory class for UE4. Factory classes are not included
 in packaged games, they are only included in editor builds. This means we must make a new module (in this example, an editor-only module) to house our factory class or else our packaging will fail. 
 
 The above repo is a minimal example of this and a walkthrough is provided below.
