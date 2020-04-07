@@ -50,3 +50,5 @@ public class MinimalModuleEditor : ModuleRules
 
   ![Module.h](https://cdn.discordapp.com/attachments/381955162387906572/696993137394188298/unknown.png)
   ![Module.cpp](https://cdn.discordapp.com/attachments/381955162387906572/696993296139943957/unknown.png)
+
+5.) Fully clear intermediates and rebuild. 
