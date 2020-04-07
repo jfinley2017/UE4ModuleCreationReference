@@ -1,0 +1,21 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.24",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+        {
+            "Name": "MinimalModule",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "CoreUObject"
+            ]
+        },
+        {   
+            "Name": "MinimalModuleEditor",
+            "Type": "Editor", 
+            "LoadingPhase": "PostEngineInit" 
+        }
+	]
+}
