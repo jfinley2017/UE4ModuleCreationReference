@@ -10,7 +10,7 @@ Substitute the following instances of MyGame/MinimalModule with your project nam
 
 1.) Edit your uproject to include the new module
 
-  ![uproject-image](https://cdn.discordapp.com/attachments/381955162387906572/696983635018121226/unknown.png)
+  ![uproject-image](https://cdn.discordapp.com/attachments/381955162387906572/697154646455746560/unknown.png)
   
   - *Valid Types*: Runtime, RuntimeNoCommandlet, Developer, Editor, EditorNoCommandlet, Program
   - *Valid LoadingPhase Types*: EarliestPossible, PostConfigInit, PostSplashScreen, PreEarlyLoadingScreen, PreLoadingScreen, PreDefault, Default, PostDefault, PostEngineInit, None, Max
