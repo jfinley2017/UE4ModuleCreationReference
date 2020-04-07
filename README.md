@@ -5,7 +5,7 @@ in packaged games, they are only included in editor builds. This means we must m
 The above repo is a minimal example of this and a walkthrough is provided below.
 
 # Recreation Steps:
-Substitute instances of MyGame with your project naming convention.
+Substitute the following instances of MyGame with your project naming convention.
 
 
 1.) Edit your uproject to include the new Module
