@@ -48,7 +48,52 @@ public class MinimalModuleEditor : ModuleRules
 ```  
 4.) Create two new source files, ```MyNewModule.h``` and ```MyNewModule.cpp```. Place these in your new module directory and extend IModuleInterface as shown below.
 
-  ![Module.h](https://cdn.discordapp.com/attachments/381955162387906572/696993137394188298/unknown.png)
-  ![Module.cpp](https://cdn.discordapp.com/attachments/381955162387906572/696993296139943957/unknown.png)
+```Source/MyNewModule/MyNewModule.h``` 
+
+```c++
+#pragma once
+
+#include "CoreMinimal.h"
+
+#include "Modules/ModuleInterface.h"
+#include "Modules/ModuleManager.h"
+
+DECLARE_LOG_CATEGORY_EXTERN(LogMinimalModuleEditor, Log, All);
+
+class FMinimalModuleEditorModule : public IModuleInterface
+{
+
+public:
+
+    virtual void StartupModule() override;
+    virtual void ShutdownModule() override;
+
+};
+```
+
+```Source/MyNewModule/MyNewModule.cpp```
+
+```c++
+#include "MinimalModule.h"
+
+IMPLEMENT_GAME_MODULE(FMinimalModuleEditorModule, MinimalModuleEditor);
+
+DEFINE_LOG_CATEGORY(LogMinimalModuleEditor);
+
+#define LOCTEXT_NAMESPACE "FMinimalModuleEditor"
+
+void FMinimalModuleEditorModule::StartupModule()
+{
+    UE_LOG(LogMinimalModuleEditor, Log, TEXT("MinimalModuleEditorStarted"));
+}
+
+void FMinimalModuleEditorModule::ShutdownModule()
+{
+    UE_LOG(LogMinimalModuleEditor, Log, TEXT("MinimalModuleEditorEnded"));
+
+}
+
+#undef LOCTEXT_NAMESPACE
+```
 
 5.) Fully clear intermediates and rebuild. 
