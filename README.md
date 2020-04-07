@@ -31,17 +31,17 @@ the same as the module name you have chosen. In this example we would name the n
 ```c#
 using UnrealBuildTool;
 
-public class MinimalModuleEditor : ModuleRules
+public class MyNewModule : ModuleRules
 {
-    public MinimalModuleEditor(ReadOnlyTargetRules Target) : base(Target)
+    public MyNewModule(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UnrealEd" });
-        PublicDependencyModuleNames.Add("MinimalModule");
+        PublicDependencyModuleNames.Add("MyGame");
 
-        PublicIncludePaths.AddRange(new string[] { "MinimalModuleEditor/Public" } );
-        PrivateIncludePaths.AddRange(new string[] { "MinimalModuleEditor/Private" } );
+        PublicIncludePaths.AddRange(new string[] { "MyNewModule/Public" } );
+        PrivateIncludePaths.AddRange(new string[] { "MyNewModule/Private" } );
 
 	}
 }
@@ -58,9 +58,9 @@ public class MinimalModuleEditor : ModuleRules
 #include "Modules/ModuleInterface.h"
 #include "Modules/ModuleManager.h"
 
-DECLARE_LOG_CATEGORY_EXTERN(LogMinimalModuleEditor, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogMyNewModule, Log, All);
 
-class FMinimalModuleEditorModule : public IModuleInterface
+class FMyNewModule : public IModuleInterface
 {
 
 public:
@@ -74,22 +74,22 @@ public:
 ```Source/MyNewModule/MyNewModule.cpp```
 
 ```c++
-#include "MinimalModule.h"
+#include "MyNewModule.h"
 
-IMPLEMENT_GAME_MODULE(FMinimalModuleEditorModule, MinimalModuleEditor);
+IMPLEMENT_GAME_MODULE(FMyNewModule, MyNewModule);
 
-DEFINE_LOG_CATEGORY(LogMinimalModuleEditor);
+DEFINE_LOG_CATEGORY(LogMyNewModule);
 
-#define LOCTEXT_NAMESPACE "FMinimalModuleEditor"
+#define LOCTEXT_NAMESPACE "FMyNewModule"
 
-void FMinimalModuleEditorModule::StartupModule()
+void FMyNewModule::StartupModule()
 {
-    UE_LOG(LogMinimalModuleEditor, Log, TEXT("MinimalModuleEditorStarted"));
+    UE_LOG(LogMyNewModule, Log, TEXT("MyNewModule Started"));
 }
 
-void FMinimalModuleEditorModule::ShutdownModule()
+void FMyNewModule::ShutdownModule()
 {
-    UE_LOG(LogMinimalModuleEditor, Log, TEXT("MinimalModuleEditorEnded"));
+    UE_LOG(LogMyNewModule, Log, TEXT("MyNewModule Ended"));
 
 }
 
