@@ -26,6 +26,8 @@ Substitute the following instances of MyGame/MinimalModule with your project nam
 3.) Create (or duplicate ```MyGame.Build.cs```, located in ```Source/MyGame```) in the new directory. Name this 
 the same as the module name you have chosen. In this example we would name the new build file ```MyNewModule.Build.cs```. Make the following changes.
 
+```Source/MyNewModule/MyNewModule.Build.cs ```
+
   ![Module-build-cs](https://cdn.discordapp.com/attachments/381955162387906572/696990321686478918/unknown.png)
   
 ```c#
