@@ -10,8 +10,8 @@ public class MinimalModuleEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("MinimalModule");
-        
-        // Added
+		
         ExtraModuleNames.Add("MinimalModuleEditor");
+		
 	}
 }
