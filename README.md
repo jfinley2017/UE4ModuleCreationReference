@@ -5,10 +5,10 @@ in packaged games, they are only included in editor builds. This means we must m
 The above repo is a minimal example of this and a walkthrough is provided below.
 
 # Recreation Steps:
-Substitute the following instances of MyGame with your project naming convention.
+Substitute the following instances of MyGame/MinimalModule with your project naming convention.
 
 
-1.) Edit your uproject to include the new Module
+1.) Edit your uproject to include the new module
 
   ![uproject-image](https://cdn.discordapp.com/attachments/381955162387906572/696983635018121226/unknown.png)
   
